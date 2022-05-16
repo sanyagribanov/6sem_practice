@@ -2,11 +2,17 @@ import cv2 as cv
 import numpy as np
 
 print("Координаты точки A(x1;y1):")
-x1 = float(input("\tx1 = "))
-y1 = float(input("\ty1 = "))
+x1 = int(input("\tx1 = "))
+y1 = int(input("\ty1 = "))
 print("Координаты точки B(x2;y2):")
-x2 = float(input("\tx2 = "))
-y2 = float(input("\ty2 = "))
+x2 = int(input("\tx2 = "))
+y2 = int(input("\ty2 = "))
+print("Координаты точки C(x1;y1):")
+x3 = int(input("\tx1 = "))
+y3 = int(input("\ty1 = "))
+print("Координаты точки D(x2;y2):")
+x4 = int(input("\tx2 = "))
+y4 = int(input("\ty2 = "))
 
 print("Уравнение прямой, проходящей через эти точки:")
 k = (y1 - y2) / (x1 - x2)
@@ -17,22 +23,19 @@ print(" y = %.2f*x + %.2f" % (k, b))
 img = np.zeros( (512, 512, 3), np.uint8)
 
 #рисование линии
-cv.line(img,(k[0],b[0]), (212, 500), (0,0,255), 2,cv.LINE_8)
+#cv.line(img,int(k), int(b), (0,0,255), 2,cv.LINE_8)
 
-cv.line(img,(x1[0],y1[0]), (90, 500), (0,255,255), 2,cv.LINE_8)
+cv.line(img,(0,int(b)), (512, int(k * 512 + b)),(255,255,0), 2,cv.LINE_8)
+cv.line(img,(x3,y3), (x4,y4),(255,0,0), 2,cv.LINE_8)
 
-cv.line(img,(x2[0],y2[0]), (30, 400), (0,255,0), 2,cv.LINE_8)
+entrance = cv.putText(img,'Entrance',(10,50),cv.FONT_HERSHEY_PLAIN , 4,(255,255,255),2,cv.LINE_AA)
+exit = cv.putText(img,'Exit',(120,500),cv.FONT_HERSHEY_PLAIN , 4,(255,255,255),2,cv.LINE_AA)
 
-
-cv.putText(img,'Entrance',(10,50),cv.FONT_HERSHEY_PLAIN , 4,(255,255,255),2,cv.LINE_AA)
-cv.putText(img,'Exit',(120,500),cv.FONT_HERSHEY_PLAIN , 4,(255,255,255),2,cv.LINE_AA)
+# if
 
 #дисплей
 cv.imshow('line', img)
-cv.waitKey(5000)
+cv.waitKey(20000)
 
 #закрыть окно
 cv.destroyAllWindows()
-
-
-
