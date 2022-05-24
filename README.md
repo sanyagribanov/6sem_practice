@@ -17,3 +17,8 @@ https://console.cloud.google.com/marketplace/browse?filter=solution-type:dataset
 2) списки
 3) множества<br>
 Множества в Python – это структура данных, которые содержат неупорядоченные элементы. Множество не содержит дубликаты элементов;
+
+# Задания
+1) пересечение линий
+![image](https://user-images.githubusercontent.com/86486142/169977502-a07e1e0d-54b3-4076-a930-80cc3a9f0237.png)
+
