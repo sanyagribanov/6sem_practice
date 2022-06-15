@@ -22,3 +22,5 @@ https://console.cloud.google.com/marketplace/browse?filter=solution-type:dataset
 1) пересечение линий
 ![image](https://user-images.githubusercontent.com/86486142/169977502-a07e1e0d-54b3-4076-a930-80cc3a9f0237.png)
 
+4-7) нахождение объектов по маске
+![изображение](https://user-images.githubusercontent.com/86486142/173921382-126f943f-db6c-4104-9203-15f62cb11883.png)
